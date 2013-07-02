@@ -1,5 +1,5 @@
-<?php return function ($text, $_core_print) {
-    $_core_print($text."\n");
+<?php return function ($text, $__print) {
+    $__print($text."\n");
 };
 
 //@Test

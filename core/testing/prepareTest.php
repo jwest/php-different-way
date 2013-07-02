@@ -1,8 +1,8 @@
-<?php return function ($functionName, $testCase, $_core_testing_runTest, $_core_println)
+<?php return function ($functionName, $testCase, $__runTest, $_core_println)
 {
     $_core_println($functionName);
-    return array_map(function($test) use ($functionName, $_core_testing_runTest) {
-        return $_core_testing_runTest($functionName, $test);
+    return array_map(function($test) use ($functionName, $__runTest) {
+        return $__runTest($functionName, $test);
     }, $testCase);
 };
 
