@@ -1,4 +1,5 @@
-<?php return function($functionName) {
+<?php return function($functionName)
+{
     return str_replace('_', '/', $functionName) .'.php';
 };
 

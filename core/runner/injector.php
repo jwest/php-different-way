@@ -22,8 +22,9 @@ function core_runner_injector($functionName) {
 
         $return = call_user_func_array($_function, array_merge(func_get_args(), $injectors));
 
-        if (is_object($return) && !($return instanceof Closure))
+        if (is_object($return) && !($return instanceof Closure)) {
             die ('SYNTAX: function: "'.$functionName.'", don\'t return object');
+        }
 
         return $return;
     };

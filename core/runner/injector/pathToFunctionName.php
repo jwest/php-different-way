@@ -1,4 +1,5 @@
-<?php return function($path) {
+<?php return function($path)
+{
     return substr(str_replace('/', '_', $path), 0, -4);
 };
 

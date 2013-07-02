@@ -1,4 +1,5 @@
-<?php return function($function) {
+<?php return function($function)
+{
     return array_map(function($param) {
         return array(
             'name' => $param->getName(),
