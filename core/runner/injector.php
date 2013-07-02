@@ -12,7 +12,7 @@ function core_runner_injector($functionName) {
 
     return function() use ($_function, $_prepareInjectors, $_prepareParams, $_filterParams, $functionName) {
 
-        $params = $_prepareParams($_function);
+        $params = $_prepareParams($functionName, $_function);
         $injectors = $_prepareInjectors($functionName, $params, $_filterParams);
         $userArgsNum = count($params) - count($injectors);
 

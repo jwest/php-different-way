@@ -1,10 +1,10 @@
-<?php return function ($path, $_core_fs_globFilesRecursive, $_core_fs_globFiles, $_core_fs_globDir)
+<?php return function ($path, $__globFilesRecursive, $_core_fs_globFiles, $_core_fs_globDir)
 {
     $files = $_core_fs_globFiles($path);
 
     foreach ($_core_fs_globDir($path) as $dir)
     {
-        $files = array_merge($files, $_core_fs_globFilesRecursive($dir.'/'));
+        $files = array_merge($files, $__globFilesRecursive($dir.'/'));
     }
     return $files;
 };
