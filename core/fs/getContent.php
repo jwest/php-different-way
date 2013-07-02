@@ -1,8 +1,6 @@
 <?php return function ($path)
 {
-    return !file_exists($path) ?
-        null :
-        file_get_contents($path);
+    return !file_exists($path) ? null : file_get_contents($path);
 };
 
 //@Test
